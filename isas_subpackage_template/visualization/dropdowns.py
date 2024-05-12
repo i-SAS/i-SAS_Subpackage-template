@@ -2,6 +2,7 @@ from typing import Any
 
 from isas_base.data import DynamicData
 from isas_base.subpackage import BaseVisualization
+from PySide6 import QtWidgets
 
 
 class Dropdowns(BaseVisualization):
@@ -16,6 +17,17 @@ class Dropdowns(BaseVisualization):
         }
     DEFAULT_INPUT_DATA_NAME_DICT = {}
     DEFAULT_OUTPUT_DATA_NAME_DICT = {}
+
+    def _create_widget(self) -> QtWidgets.QWidget:
+        """Arbitrary process executed in widget creating.
+
+        Returns:
+            A widget of Qt.
+        """
+        # Example. ---
+        widget = QtWidgets.QComboBox()
+        # --- The end of example.
+        return widget
 
     def _set_model(self) -> None:
         """Arbitrary process executed in model setting."""

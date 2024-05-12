@@ -1,13 +1,10 @@
-# i-SAS_Subpackage-template_MIT
+# i-SAS_Subpackage-template
 Implementation of the {package_type} subpackage {package_name} for i-SAS.
-
-> [!IMPORTANT]
-> This repository is not complete but development has been stopped.
 
 ## 1. Clone
 ```shell
-$ git clone git@github.com:i-SAS/i-SAS_Subpackage-template_MIT.git
-$ cd i-SAS_Subpackage-template_MIT
+$ git clone git@github.com:i-SAS/i-SAS_Subpackage-template.git
+$ cd i-SAS_Subpackage-template
 ```
 
 ## 2. Docker build & run
