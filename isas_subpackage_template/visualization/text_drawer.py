@@ -5,6 +5,7 @@ from isas_base.data import DynamicData
 from isas_base.subpackage import BaseVisualization
 from matplotlib.backends.backend_qt5agg import \
     FigureCanvasQTAgg as FigureCanvas
+from PySide6 import QtWidgets
 
 
 class TextDrawer(BaseVisualization):
@@ -19,6 +20,21 @@ class TextDrawer(BaseVisualization):
         }
     DEFAULT_INPUT_DATA_NAME_DICT = {}
     DEFAULT_OUTPUT_DATA_NAME_DICT = {}
+
+    def _create_widget(self) -> QtWidgets.QWidget:
+        """"Arbitrary process executed in widget creating.
+
+        Returns:
+            A widget of Qt.
+        """
+        # Example. ---
+        fig_size = (1, 1)  # dummy size
+        fig = plt.figure(figsize=fig_size)
+        fig.patch.set_alpha(0.0)
+        widget = FigureCanvas(fig)
+        self.ax = widget.figure.subplots()
+        # --- The end of example.
+        return widget
 
     def _set_model(self) -> None:
         """Arbitrary process executed in model setting."""

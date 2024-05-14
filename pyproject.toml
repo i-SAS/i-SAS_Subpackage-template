@@ -10,11 +10,12 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
-isas_base = { git = "ssh://git@github.com/i-SAS/i-SAS_Base_MIT", branch = "master" }
+isas_base = { git = "ssh://git@github.com/i-SAS/i-SAS_Base", tag = "v1.0.0" }
 numpy = "*"
 pandas = "*"
 pyyaml = "*"
 matplotlib = "*"
+pyside6 = "*"
 
 [tool.poetry.dev-dependencies]
 flake8 = "6.1.0"
